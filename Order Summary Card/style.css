@@ -1,5 +1,8 @@
 body{
-    background: linear-gradient(to top, hsl(225, 100%, 94%), hsla(224, 23%, 55%, 0.541));
+    background-image: url(../image/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: hsl(225, 100%, 94%);
   }
   
 
@@ -14,7 +17,6 @@ body{
 .box{
     width: 350px;
     height: 530px;
-    border: 1px solid black;
     border-radius: 15px;
     background-color: white;
 }
