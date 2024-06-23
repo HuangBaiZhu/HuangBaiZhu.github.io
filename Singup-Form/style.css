@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: hsl(0, 100%, 74%);
     background-image: url(../image/bg-intro-desktop.png);
@@ -11,36 +15,49 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1100px;
-    height: 500px;
-    padding: 40px;
-    margin: 0;
+    width: 1200px;
+    height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.root-box{
+    flex: 1;
+    padding: 0 20px;
 }
 
 h1{
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 60px;
+    line-height: 70px;
 }
 
 p{
     font-size: 16px;
+    opacity: 0.8;
 }
 
 .form-box{
     background-color: white;
     border-radius: 5px;
-    padding: 20px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%;
+}
+
+.box p{
+    margin: 0;
 }
 
 .box-blue{
     background-color: hsl(248, 32%, 49%);
     width: 100%;
     text-align: center;
-    padding: 3px 20px;
+    padding: 2px 0;
     border-radius: 5px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.2);
 }
 
 input{
@@ -51,6 +68,7 @@ input{
     font-family: 'Poppins', sans-serif;
     display: block;
     width: 100%;
+    padding: 15px 25px;
 }
 
 input:focus{
@@ -59,6 +77,8 @@ input:focus{
 }
 
 button{
+    text-transform: uppercase;
+    letter-spacing: 1px;
     background-color: hsl(154, 59%, 51%);
     border: 1px solid hsl(154, 59%, 45%);
     border-radius: 5px;
@@ -71,7 +91,54 @@ button{
     width: 100%;
 }
 
-button:active {
-    transform: translateY(4px);
+button:focus {
+    outline: none;
     cursor: pointer;
+  }
+
+  .form-control{
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .form-control small{
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    text-align: right;
+    opacity: 0;
+  }
+
+  small{
+    display: block;
+    color: #bbb;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+
+  small strong{
+    color: hsl(0, 100%, 74%);
+  }
+
+  .error-icon{
+    color: hsl(0, 100%, 74%);
+    border-color: hsl(0, 100%, 74%);
+  }
+
+  .error-icon::placeholder{
+    color: hsl(0, 100%, 74%);
+  }
+
+  .form-control img{
+    opacity: 0;
+    top: 15px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .error-icon img{
+    opacity: 1;
   }
